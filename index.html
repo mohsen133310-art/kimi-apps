@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#6d45d9">
+  <meta name="description" content="Kimi Apps؛ مرجع برنامه‌ها و ابزارهای ساخته‌شده توسط ما. معرفی، بررسی و دانلود مستقیم برنامه‌ها.">
+  <title>Kimi Apps | خانه برنامه‌های شما</title>
+  <style>
+    :root{--purple:#7047dc;--purple2:#8a67ed;--ink:#211b32;--muted:#777187;--line:#eeeaf6;--bg:#faf9fd;--white:#fff;--shadow:0 14px 40px #34205c12}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,"Vazirmatn",Arial,sans-serif;line-height:1.8}
+    a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}button{cursor:pointer}
+    .container{width:min(1120px,calc(100% - 36px));margin:auto}
+    .topbar{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:11px;font-size:21px;font-weight:900;letter-spacing:-.5px}
+    .logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,#9b7af5,#6237ce);display:grid;place-items:center;color:#fff;font-size:24px;box-shadow:0 7px 18px #7047dc44}
+    .navlinks{display:flex;align-items:center;gap:24px;color:#625b70;font-size:14px}
+    .navlinks a:hover{color:var(--purple)}.nav-cta,.primary{border:0;background:var(--purple);color:white;padding:11px 19px;border-radius:12px;font-weight:700}.nav-cta:hover,.primary:hover{background:#5d35c5}
+    .hero{padding:68px 0 52px;background:radial-gradient(ellipse at 85% 10%,#eee8ff 0,transparent 45%),linear-gradient(180deg,#fff 0,#faf9fd 100%)}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:44px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;background:#f0ebff;color:#6842cf;padding:6px 12px;border-radius:99px;font-size:12px;font-weight:700}
+    h1{font-size:clamp(32px,5vw,53px);line-height:1.35;letter-spacing:-1.5px;margin:18px 0 12px}
+    h1 span{color:var(--purple)}.hero p{color:var(--muted);font-size:16px;max-width:590px;margin:0 0 25px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}.secondary{border:1px solid #ded5f8;background:#fff;color:var(--purple);padding:10px 18px;border-radius:12px;font-weight:700}
+    .hero-art{min-height:260px;border-radius:30px;background:linear-gradient(145deg,#7d55e5,#5630b7);position:relative;overflow:hidden;display:grid;place-items:center;box-shadow:0 25px 55px #7047dc3b}
+    .hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid #ffffff35;border-radius:50%;width:250px;height:250px}.hero-art:after{width:340px;height:340px}
+    .app-emoji{font-size:90px;z-index:1;filter:drop-shadow(0 14px 16px #2b175b55)}.float-card{position:absolute;z-index:2;background:#fff;color:#51446e;border-radius:14px;padding:10px 14px;font-size:12px;font-weight:700;box-shadow:var(--shadow)}.fc1{top:27px;right:22px}.fc2{bottom:25px;left:22px}
+    .section{padding:44px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:22px}.section-head h2{font-size:24px;margin:0}.section-head p{margin:4px 0 0;color:var(--muted);font-size:13px}
+    .searchbar{display:flex;gap:10px;margin:24px 0 16px}.searchbar input{flex:1;min-width:0;border:1px solid var(--line);border-radius:13px;padding:13px 16px;background:#fff;outline:none}.searchbar input:focus,.field:focus{border-color:#a58af0;box-shadow:0 0 0 3px #7047dc14}
+    .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}.chip{border:1px solid var(--line);background:#fff;color:#6c6579;padding:7px 14px;border-radius:99px;font-size:12px}.chip.active,.chip:hover{background:#efeaff;border-color:#d9cdfd;color:#6740cf}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.app-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 5px 20px #2b175b06;transition:.2s;cursor:pointer}.app-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#ded4fa}
+    .app-top{display:flex;align-items:center;gap:13px}.app-icon{width:58px;height:58px;border-radius:17px;object-fit:cover;background:#f0ebff;display:grid;place-items:center;font-size:27px;flex:none}.app-icon img{width:100%;height:100%;object-fit:cover;border-radius:17px}.app-card h3{font-size:16px;margin:0 0 2px}.muted{color:var(--muted);font-size:12px}.app-desc{font-size:13px;color:#716b7e;min-height:48px;margin:14px 0}.card-bottom{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #f2eff7;padding-top:12px}.version{font-size:11px;color:#81798e}.card-link{color:var(--purple);font-size:12px;font-weight:800}
+    .empty{grid-column:1/-1;text-align:center;padding:45px 15px;color:var(--muted);background:#fff;border:1px dashed #ded7eb;border-radius:18px}
+    .about{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{padding:20px;border:1px solid var(--line);border-radius:17px}.feature b{display:block;margin-bottom:5px}.feature p{margin:0;color:var(--muted);font-size:13px}
+    footer{padding:28px 0;color:var(--muted);font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .modal{position:fixed;inset:0;background:#17112699;z-index:50;display:none;align-items:flex-start;justify-content:center;padding:24px 12px;overflow:auto}.modal.open{display:flex}.dialog{width:min(760px,100%);background:#fff;border-radius:22px;padding:24px;position:relative;margin:auto}.close{position:absolute;left:17px;top:15px;border:0;background:#f3f0f8;border-radius:10px;width:36px;height:36px;font-size:20px}
+    .detail-head{display:flex;gap:16px;align-items:center;padding-left:40px}.detail-head .app-icon{width:72px;height:72px}.detail-head h2{margin:0;font-size:23px}.detail-desc{color:#6f687c;font-size:14px;margin:20px 0}.detail-actions{display:flex;gap:10px;flex-wrap:wrap}.detail-actions a{display:inline-block}.detail-meta{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:12px;margin-top:15px}
+    .comments{border-top:1px solid var(--line);margin-top:25px;padding-top:20px}.comments h3{font-size:18px;margin:0 0 14px}.comment-form{display:grid;gap:10px;background:#faf9fd;padding:15px;border-radius:15px;margin-bottom:18px}.field{width:100%;border:1px solid var(--line);border-radius:11px;padding:11px 13px;background:#fff;outline:none}.comment-form textarea{min-height:85px;resize:vertical}.form-row{display:grid;grid-template-columns:1fr 2fr;gap:10px}.comment{padding:13px 0;border-bottom:1px solid #f1eef6}.comment-head{display:flex;justify-content:space-between;gap:10px}.comment-name{font-weight:800;font-size:13px}.comment-date{font-size:10px;color:#9a93a5}.comment-body{font-size:13px;color:#625b70;white-space:pre-wrap;overflow-wrap:anywhere}.reply{margin:10px 0 0 22px;padding:10px 12px;border-right:2px solid #c7b7fa;background:#faf9fd;border-radius:9px}.reply-form{display:flex;gap:7px;margin-top:9px}.reply-form input{flex:1;min-width:0}.tiny-btn{border:0;background:#eee8ff;color:#6540c9;border-radius:9px;padding:7px 11px;font-size:11px;font-weight:700}
+    .toast{position:fixed;bottom:20px;right:50%;transform:translateX(50%);background:#251c38;color:white;padding:11px 17px;border-radius:12px;z-index:100;font-size:13px;display:none;box-shadow:var(--shadow)}.toast.show{display:block}
+    @media(max-width:800px){.hero-grid{grid-template-columns:1fr}.hero-art{min-height:210px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.navlinks{gap:12px}.about-grid{grid-template-columns:1fr}}
+    @media(max-width:540px){.nav{height:66px}.navlinks a:not(.nav-cta){display:none}.nav-cta{padding:8px 12px;font-size:12px}.hero{padding:42px 0 30px}.hero-art{min-height:170px}.app-emoji{font-size:65px}.section{padding:32px 0}.section-head h2{font-size:20px}.grid{grid-template-columns:1fr}.app-card{padding:15px}.form-row{grid-template-columns:1fr}.dialog{padding:19px}.detail-head h2{font-size:19px}}
+  </style>
+</head>
+<body>
+<header class="topbar"><div class="container nav">
+  <a class="brand" href="#"><span class="logo">K</span><span>Kimi Apps</span></a>
+  <nav class="navlinks"><a href="#apps">برنامه‌ها</a><a href="#about">درباره ما</a><a href="#footer">ارتباط</a><a class="nav-cta" href="#apps">کشف برنامه‌ها</a></nav>
+</div></header>
+<main>
+<section class="hero"><div class="container hero-grid">
+  <div><span class="eyebrow">✦ دنیای برنامه‌های Kimi</span><h1>برنامه‌های خوب،<br><span>همیشه در دسترس</span></h1><p>اینجا خانه برنامه‌ها و ابزارهایی است که می‌سازیم؛ جزئیات را ببین، تجربه‌ات را بنویس و نسخه موردنظرت را دریافت کن.</p><div class="hero-actions"><a class="primary" href="#apps">مشاهده برنامه‌ها ←</a><a class="secondary" href="#about">درباره Kimi Apps</a></div></div>
+  <div class="hero-art"><span class="float-card fc1">✦ برنامه‌های تازه</span><span class="app-emoji">📱</span><span class="float-card fc2">دانلود آسان · دیدگاه کاربران</span></div>
+</div></section>
+<section class="section" id="apps"><div class="container">
+  <div class="section-head"><div><h2>برنامه‌ها</h2><p>برنامه موردنظرت را پیدا کن و بیشتر درباره‌اش بدان</p></div><span class="muted" id="countLabel">در حال دریافت…</span></div>
+  <div class="searchbar"><input id="searchInput" type="search" placeholder="جست‌وجوی نام یا توضیحات برنامه…"></div>
+  <div class="filters" id="filters"><button class="chip active" data-cat="all">همه</button></div>
+  <div class="grid" id="appGrid"><div class="empty">در حال بارگذاری برنامه‌ها…</div></div>
+</div></section>
+<section class="section about" id="about"><div class="container"><div class="section-head"><div><h2>چرا Kimi Apps؟</h2><p>یک خانه ساده برای پیدا کردن و دریافت ساخته‌های ما</p></div></div>
+  <div class="about-grid"><div class="feature"><b>⬇️ دانلود مستقیم</b><p>لینک نسخه‌های قابل دریافت و نسخه وب هر برنامه در یک صفحه.</p></div><div class="feature"><b>💬 نظر کاربران</b><p>بدون ساخت حساب کاربری، تجربه‌ات را با دیگران به اشتراک بگذار.</p></div><div class="feature"><b>🔎 پیدا کردن آسان</b><p>جست‌وجو و دسته‌بندی برای رسیدن سریع‌تر به برنامه دلخواه.</p></div></div>
+</div></section>
+</main>
+<footer id="footer"><div class="container footer-inner"><span>© <span id="year"></span> Kimi Apps · ساخته‌شده با علاقه 💜</span><span>خانه برنامه‌های شما</span></div></footer>
+<div class="modal" id="appModal" aria-hidden="true"><div class="dialog"><button class="close" id="closeModal" aria-label="بستن">×</button><div id="detailContent"></div></div></div>
+<div class="toast" id="toast"></div>
+<script>
+const SUPABASE_URL = "https://rrcalskgqqkclogvjsyv.supabase.co";
+const SUPABASE_KEY = "sb_publishable_1NABHj3T0JRfmO29fze7rQ_6ZQU2zep";
+const headers = {"apikey":SUPABASE_KEY,"Authorization":"Bearer "+SUPABASE_KEY,"Content-Type":"application/json"};
+const $ = s => document.querySelector(s);
+let allApps=[], activeCategory="all", currentApp=null;
+const esc = v => String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safeUrl = value => {try{const u=new URL(value);return ["https:","http:"].includes(u.protocol)?u.href:"#"}catch{return "#"}};
+function toast(msg){const el=$("#toast");el.textContent=msg;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),2800)}
+async function api(path,options={}){const res=await fetch(SUPABASE_URL+"/rest/v1/"+path,{...options,headers:{...headers,...(options.headers||{})}});if(!res.ok){let msg="خطا در ارتباط با سرور";try{const j=await res.json();msg=j.message||j.error||msg}catch{}throw new Error(msg)}if(res.status===204)return null;return res.json()}
+function iconMarkup(app){return app.icon_url?'<div class="app-icon"><img loading="lazy" src="'+esc(safeUrl(app.icon_url))+'" alt=""></div>':'<div class="app-icon">📦</div>'}
+function renderApps(){const q=$("#searchInput").value.trim().toLocaleLowerCase("fa");const list=allApps.filter(a=>(activeCategory==="all"||a.category===activeCategory)&&(!q||(a.title+" "+(a.description||"")).toLocaleLowerCase("fa").includes(q)));$("#countLabel").textContent=list.length+" برنامه";$("#appGrid").innerHTML=list.length?list.map(a=>'<article class="app-card" data-id="'+esc(a.id)+'"><div class="app-top">'+iconMarkup(a)+'<div><h3>'+esc(a.title)+'</h3><div class="muted">'+esc(a.category||"عمومی")+'</div></div></div><p class="app-desc">'+esc(a.description||"برای مشاهده جزئیات برنامه کلیک کن.")+'</p><div class="card-bottom"><span class="version">'+(a.version?"نسخه "+esc(a.version):"")+'</span><span class="card-link">مشاهده جزئیات ←</span></div></article>').join(""):'<div class="empty">برنامه‌ای با این مشخصات پیدا نشد.</div>'}
+function renderFilters(){const cats=[...new Set(allApps.map(a=>a.category).filter(Boolean))];$("#filters").innerHTML='<button class="chip '+(activeCategory==="all"?"active":"")+'" data-cat="all">همه</button>'+cats.map(c=>'<button class="chip '+(activeCategory===c?"active":"")+'" data-cat="'+esc(c)+'">'+esc(c)+'</button>').join("")}
+async function loadApps(){try{allApps=await api("apps?select=id,slug,title,description,category,icon_url,screenshots,version,apk_url,web_url,github_url,created_at&is_published=eq.true&order=created_at.desc");renderFilters();renderApps()}catch(e){$("#appGrid").innerHTML='<div class="empty">دریافت برنامه‌ها ممکن نشد. لطفاً کمی بعد دوباره تلاش کن.</div>';$("#countLabel").textContent="خطا";console.error(e)}}
+function openApp(id){const app=allApps.find(a=>a.id===id);if(!app)return;currentApp=app;const links=(app.apk_url?'<a class="primary" target="_blank" rel="noopener" href="'+esc(safeUrl(app.apk_url))+'">دانلود APK</a>':"")+(app.web_url?'<a class="secondary" target="_blank" rel="noopener" href="'+esc(safeUrl(app.web_url))+'">اجرای نسخه وب</a>':"")+(app.github_url?'<a class="secondary" target="_blank" rel="noopener" href="'+esc(safeUrl(app.github_url))+'">مشاهده در GitHub</a>':"");$("#detailContent").innerHTML='<div class="detail-head">'+iconMarkup(app)+'<div><h2>'+esc(app.title)+'</h2><div class="muted">'+esc(app.category||"عمومی")+'</div></div></div><p class="detail-desc">'+esc(app.description||"توضیحی برای این برنامه ثبت نشده است.")+'</p><div class="detail-actions">'+(links||'<span class="muted">هنوز لینکی برای این برنامه ثبت نشده است.</span>')+'</div><div class="detail-meta">'+(app.version?'<span>نسخه: '+esc(app.version)+'</span>':"")+'<span>دیدگاه‌ها و پاسخ‌ها برای همه آزاد است</span></div><div class="comments"><h3>دیدگاه کاربران</h3><form class="comment-form" id="commentForm"><div class="form-row"><input class="field" name="display_name" maxlength="60" required placeholder="نام نمایشی"><input class="field" name="body" maxlength="2000" required placeholder="دیدگاهت را بنویس…"></div><button class="primary" type="submit">ارسال دیدگاه</button><span class="muted">دیدگاه پس از ارسال فوراً نمایش داده می‌شود؛ لطفاً محترمانه بنویس.</span></form><div id="commentList">در حال دریافت دیدگاه‌ها…</div></div>' ;$("#appModal").classList.add("open");$("#appModal").setAttribute("aria-hidden","false");loadComments(app.id)}
+async function loadComments(appId){const box=$("#commentList");try{const comments=await api("comments?select=id,display_name,body,created_at&id=not.is.null&app_id=eq."+encodeURIComponent(appId)+"&status=eq.approved&order=created_at.desc");if(!comments.length){box.innerHTML='<div class="muted">هنوز دیدگاهی ثبت نشده؛ اولین نفر باش!</div>';return}box.innerHTML=comments.map(c=>'<div class="comment"><div class="comment-head"><span class="comment-name">'+esc(c.display_name)+'</span><time class="comment-date">'+new Date(c.created_at).toLocaleDateString("fa-IR")+'</time></div><div class="comment-body">'+esc(c.body)+'</div><div id="replies-'+esc(c.id)+'" class="reply-list"></div><form class="reply-form" data-comment="'+esc(c.id)+'"><input class="field" name="display_name" maxlength="60" required placeholder="نام"><input class="field" name="body" maxlength="2000" required placeholder="پاسخ به این دیدگاه"><button class="tiny-btn">پاسخ</button></form></div>').join("");for(const c of comments)loadReplies(c.id)}catch(e){box.innerHTML='<div class="muted">دریافت دیدگاه‌ها ممکن نشد.</div>';console.error(e)}}
+async function loadReplies(commentId){try{const replies=await api("comment_replies?select=id,display_name,body,created_at&comment_id=eq."+encodeURIComponent(commentId)+"&status=eq.approved&order=created_at.asc");const el=$("#replies-"+CSS.escape(commentId));if(el)el.innerHTML=replies.map(r=>'<div class="reply"><b>'+esc(r.display_name)+'</b><div class="comment-body">'+esc(r.body)+'</div></div>').join("")}catch(e){console.error(e)}}
+$("#appGrid").addEventListener("click",e=>{const card=e.target.closest(".app-card");if(card)openApp(card.dataset.id)});
+$("#filters").addEventListener("click",e=>{const b=e.target.closest("[data-cat]");if(!b)return;activeCategory=b.dataset.cat;renderFilters();renderApps()});
+$("#searchInput").addEventListener("input",renderApps);
+$("#closeModal").addEventListener("click",()=>{$("#appModal").classList.remove("open");$("#appModal").setAttribute("aria-hidden","true")});
+$("#appModal").addEventListener("click",e=>{if(e.target.id==="appModal"){$("#appModal").classList.remove("open");$("#appModal").setAttribute("aria-hidden","true")}});
+$("#detailContent").addEventListener("submit",async e=>{if(e.target.id==="commentForm"){e.preventDefault();const f=new FormData(e.target);try{await api("comments",{method:"POST",headers:{"Prefer":"return=minimal"},body:JSON.stringify({app_id:currentApp.id,display_name:f.get("display_name").trim(),body:f.get("body").trim(),status:"approved"})});toast("دیدگاهت منتشر شد 💜");e.target.reset();loadComments(currentApp.id)}catch(err){toast(err.message)}}else if(e.target.matches(".reply-form")){e.preventDefault();const f=new FormData(e.target);const id=e.target.dataset.comment;try{await api("comment_replies",{method:"POST",headers:{"Prefer":"return=minimal"},body:JSON.stringify({comment_id:id,display_name:f.get("display_name").trim(),body:f.get("body").trim(),status:"approved"})});toast("پاسخت منتشر شد");e.target.reset();loadReplies(id)}catch(err){toast(err.message)}}});
+$("#year").textContent=new Date().getFullYear();loadApps();
+</script>
+</body></html>
